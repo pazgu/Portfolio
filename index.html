@@ -353,142 +353,371 @@
         </section>
 
         <section id="projects" class="reveal">
-            <h2 class="section-title">Architectural <span>Projects</span></h2>
+            <h2 class="section-title">
+                Selected Product <span>Case Studies</span>
+            </h2>
+
+            <p class="projects-intro">
+                  Products I shaped from user needs and complex workflows through product definition, architecture & delivery.
+            </p>
+
             <div class="projects-grid">
 
-                 <div class="project-card">
+                <!-- Vehicle Management System -->
 
-                   <input type="checkbox" id="video-catalog" class="modal-toggle">
+                <article class="project-card featured-project">
+
+                    <input
+                        type="checkbox"
+                        id="video-vehicle"
+                        class="modal-toggle"
+                    >
 
                     <div class="video-thumbnail">
-                        <label for="video-catalog">
-                            <img src="./assets/images/catlog.png" alt="Catalog system demo">
-                            <div class="play-button">▶</div>
+                        <label
+                            for="video-vehicle"
+                            aria-label="Play Vehicle Management System demo"
+                        >
+                            <img
+                                src="./assets/images/vehicle.png"
+                                alt="Vehicle Management and Booking System dashboard"
+                                loading="lazy"
+                            >
+
+                            <div class="project-type">
+                                Product Ownership · Secure Workflows
+                            </div>
+
+                            <div class="play-button" aria-hidden="true">▶</div>
                         </label>
                     </div>
 
                     <div class="modal">
                         <div class="modal-content">
-                            <iframe class="video-frame" src="https://www.youtube.com/embed/skgfgOUzDuU" title="Catalog System Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                            
-                            <label for="video-catalog" class="overlay"></label>
-                            <label for="video-catalog" class="close">✕</label>
-                        </div>
-                    </div>
-                    <div>
-                        <h3 class="project-name">Hierarchical Catalog Management System</h3>
-                        <p class="project-desc">
-                            A web-based hierarchical catalog management system supporting nested categories, subcategories and products with advanced operations like copy, move, and duplication. It includes a role-based permission model with inherited access rules and a search system with breadcrumb navigation and secure, permission-aware filtering.                      </p>
-                    </div>
-                    <div>
-                        <div class="tech-used">
-                            <span class="tech-tag">React</span><span class="tech-tag">TypeScript</span><span class="tech-tag">Tailwind CSS</span><span class="tech-tag">Nest.js</span><span class="tech-tag">MONGODB</span><span class="tech-tag">docker</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" target="_blank"> Live Demo &rarr;</a>
-                            <a href="https://github.com/pazgu/StockBox---Catalog-Tree-Navigation" target="_blank">📦 GitHub Code &rarr;</a>
-                        </div>
-                    </div>
-                </div>
 
-                 <div class="project-card">
-                    
-                    <input type="checkbox" id="video-vehicle" class="modal-toggle">
+                            <iframe
+                                class="video-frame"
+                                src="https://www.youtube.com/embed/ezpQ4PLQylc"
+                                title="Vehicle Management System demo"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write;
+                                    encrypted-media; gyroscope;
+                                    picture-in-picture; web-share"
+                                allowfullscreen
+                            ></iframe>
+
+                            <label
+                                for="video-vehicle"
+                                class="overlay"
+                                aria-label="Close video"
+                            ></label>
+
+                            <label
+                                for="video-vehicle"
+                                class="close"
+                                aria-label="Close video"
+                            >
+                                ✕
+                            </label>
+
+                        </div>
+                    </div>
+
+                    <div class="project-content">
+                        <h3 class="project-name">
+                            Vehicle Operations &amp; Booking Platform
+                        </h3>
+
+                        <p class="project-desc">
+                            Led the product definition and technical delivery of a
+                            multi-role operational platform for employees, supervisors,
+                            inspectors and administrators. Translated manual processes
+                            into structured ride requests, approval workflows,
+                            rule-based vehicle allocation, real-time status tracking,
+                            maintenance alerts, audit trails and operational dashboards.
+                        </p>
+
+                        <div class="project-highlights">
+                            <span>
+                                <i data-lucide="users"></i>
+                                Four distinct user roles
+                            </span>
+
+                            <span>
+                                <i data-lucide="shield-check"></i>
+                                RBAC and JWT authentication
+                            </span>
+
+                            <span>
+                                <i data-lucide="workflow"></i>
+                                End-to-end approval flows
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="project-footer">
+                        <div class="tech-used">
+                            <span class="tech-tag">Product Ownership</span>
+                            <span class="tech-tag">RBAC</span>
+                            <span class="tech-tag">Approval Workflows</span>
+                            <span class="tech-tag">Auditability</span>
+                            <span class="tech-tag">Angular</span>
+                            <span class="tech-tag">FastAPI</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                        </div>
+
+                        <div class="project-links">
+                            <a
+                                href="https://github.com/pazgu/Vehicle-Desk-System"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <i class="devicon-github-original"></i>
+                                View Code
+                                <i data-lucide="arrow-up-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </article>
+
+
+                <!-- Hierarchical Catalog -->
+
+                <article class="project-card">
+
+                    <input
+                        type="checkbox"
+                        id="video-catalog"
+                        class="modal-toggle"
+                    >
 
                     <div class="video-thumbnail">
-                        <label for="video-vehicle">
-                            <img src="./assets/images/vehicle.png" alt="Vehicle system demo">
-                            <div class="play-button">▶</div>
+                        <label
+                            for="video-catalog"
+                            aria-label="Play Hierarchical Catalog System demo"
+                        >
+                            <img
+                                src="./assets/images/catlog.png"
+                                alt="Hierarchical Catalog Management System"
+                                loading="lazy"
+                            >
+
+                            <div class="project-type">
+                                Authorization · Complex Hierarchies
+                            </div>
+
+                            <div class="play-button" aria-hidden="true">▶</div>
                         </label>
                     </div>
 
                     <div class="modal">
                         <div class="modal-content">
-                            <iframe class="video-frame" src="https://www.youtube.com/embed/ezpQ4PLQylc" title="Vehicle System Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                            
-                            <label for="video-vehicle" class="overlay"></label>
-                            <label for="video-vehicle" class="close">✕</label>
+
+                            <iframe
+                                class="video-frame"
+                                src="https://www.youtube.com/embed/skgfgOUzDuU"
+                                title="Hierarchical Catalog System demo"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write;
+                                    encrypted-media; gyroscope;
+                                    picture-in-picture; web-share"
+                                allowfullscreen
+                            ></iframe>
+
+                            <label
+                                for="video-catalog"
+                                class="overlay"
+                                aria-label="Close video"
+                            ></label>
+
+                            <label
+                                for="video-catalog"
+                                class="close"
+                                aria-label="Close video"
+                            >
+                                ✕
+                            </label>
+
                         </div>
                     </div>
-                  
-                    <div>
-                        <h3 class="project-name">Vehicle Management & Booking System</h3>
+
+                    <div class="project-content">
+                        <h3 class="project-name">
+                            Hierarchical Catalog Management System
+                        </h3>
+
                         <p class="project-desc">
-                            A web-based vehicle management and booking system with role-based access control for employees, supervisors, inspectors and administrators. It enables ride reservations, approval workflows, real-time vehicle tracking, maintenance monitoring, and automated notifications, along with centralized dashboards and reporting tools for operational insights and data export.
+                            Designed and built a product for teams managing deeply nested
+                            categories, products and delegated access. Defined complex
+                            copy, move and duplication flows alongside an inherited
+                            role-based permission model, ensuring that navigation,
+                            search results and available actions remained consistent
+                            with each user’s authorization level.
                         </p>
+
+                        <div class="project-highlights">
+                            <span>
+                                <i data-lucide="network"></i>
+                                Hierarchical data model
+                            </span>
+
+                            <span>
+                                <i data-lucide="key-round"></i>
+                                Inherited permissions
+                            </span>
+
+                            <span>
+                                <i data-lucide="search"></i>
+                                Permission-aware search
+                            </span>
+                        </div>
                     </div>
-                    <div>
+
+                    <div class="project-footer">
                         <div class="tech-used">
-                            <span class="tech-tag">angular</span><span class="tech-tag">Python</span><span class="tech-tag">FAST API</span><span class="tech-tag">POSTGRESQL</span><span class="tech-tag">SOCKET.IO</span>
+                            <span class="tech-tag">Authorization Logic</span>
+                            <span class="tech-tag">Inherited RBAC</span>
+                            <span class="tech-tag">API Design</span>
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">NestJS</span>
+                            <span class="tech-tag">MongoDB</span>
                         </div>
+
                         <div class="project-links">
-                            <a href="#" target="_blank">⚡ Code Sandbox &rarr;</a>
-                            <a href="https://github.com/pazgu/Vehicle-Desk-System" target="_blank">📦 GitHub Code &rarr;</a>
+                            <a
+                                href="https://github.com/pazgu/StockBox---Catalog-Tree-Navigation"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <i class="devicon-github-original"></i>
+                                View Code
+                                <i data-lucide="arrow-up-right"></i>
+                            </a>
                         </div>
                     </div>
-                </div>
 
-                <div class="project-card">
+                </article>
 
-                    <input type="checkbox" id="video-booking" class="modal-toggle">
+
+                <!-- Apartment Recommender -->
+
+                <article class="project-card">
+
+                    <input
+                        type="checkbox"
+                        id="video-apartment"
+                        class="modal-toggle"
+                    >
 
                     <div class="video-thumbnail">
-                        <label for="video-booking">
-                            <img src="./assets/images/booking.png" alt="Booking.com clone demo">
-                        </label>
-                    </div>
-                    <div>
-                        <h3 class="project-name">Booking.com Clone</h3>
-                        <p class="project-desc">
-                           A full-stack Booking.com clone replicating core booking flows such as hotel search, filtering, and reservations with high UI fidelity. It includes a structured database for hotel-room relationships with dynamic availability and real-time booking validation. The project focuses on scalable architecture and a seamless user experience aligned with real-world booking platforms.
-                        </p>
-                    </div>
-                    <div>
-                        <div class="tech-used">
-                            <span class="tech-tag">MySQL</span><span class="tech-tag">TypeScript</span><span class="tech-tag">Node.js</span><span class="tech-tag">Socket.IO</span><span class="tech-tag">Redux</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" target="_blank">⚡ Code Sandbox &rarr;</a>
-                            <a href="https://github.com/pazgu/Booking.com-----frontend" target="_blank">📦 GitHub Frontend Code &rarr;</a>
-                             <a href="https://github.com/pazgu/Booking.com-----backend" target="_blank">📦 GitHub Backend Code &rarr;</a>
-                        </div>
-                    </div>
-                </div>
+                        <label
+                            for="video-apartment"
+                            aria-label="Play ML Apartment Recommender demo"
+                        >
+                            <img
+                                src="./assets/images/apartment.png"
+                                alt="Machine Learning Apartment Recommender"
+                                loading="lazy"
+                            >
 
-                <div class="project-card">
-                    <input type="checkbox" id="video-apartment" class="modal-toggle">
+                            <div class="project-type">
+                                Machine Learning · Personalization
+                            </div>
 
-                    <div class="video-thumbnail">
-                        <label for="video-apartment">
-                            <img src="./assets/images/apartment.png" alt="Apartment recommander system demo">
-                            <div class="play-button">▶</div>
+                            <div class="play-button" aria-hidden="true">▶</div>
                         </label>
                     </div>
 
                     <div class="modal">
                         <div class="modal-content">
-                            <iframe class="video-frame" src="https://youtube.be/embed/wNxZ24Iucl4" title="Apartment Recommender System Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                            
-                            <label for="video-apartment" class="overlay"></label>
-                            <label for="video-apartment" class="close">✕</label>
+
+                            <iframe
+                                class="video-frame"
+                                src="https://www.youtube.com/embed/wNxZ24Iucl4"
+                                title="ML Apartment Recommender demo"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write;
+                                    encrypted-media; gyroscope;
+                                    picture-in-picture; web-share"
+                                allowfullscreen
+                            ></iframe>
+
+                            <label
+                                for="video-apartment"
+                                class="overlay"
+                                aria-label="Close video"
+                            ></label>
+
+                            <label
+                                for="video-apartment"
+                                class="close"
+                                aria-label="Close video"
+                            >
+                                ✕
+                            </label>
+
                         </div>
                     </div>
-                    <div>
-                        <h3 class="project-name">ML Apartment Recommender</h3>
+
+                    <div class="project-content">
+                        <h3 class="project-name">
+                            ML Apartment Recommendation Platform
+                        </h3>
+
                         <p class="project-desc">
-                       A full-stack apartment search and recommendation platform that aggregates real estate listings through data scraping and supports filtering for rent or purchase. It includes a machine learning-based engine that suggests apartments based on user preferences such as budget, location, and amenities. The system supports multi-city search with a responsive interface and focuses on scalable, data-driven processing of real estate data.
+                            Developed a data-driven apartment discovery product that
+                            aggregates listings and translates user preferences such as
+                            budget, location and amenities into personalized
+                            recommendations. Combined data collection, filtering and
+                            machine-learning logic to reduce the effort required to
+                            identify relevant properties across multiple cities.
                         </p>
+
+                        <div class="project-highlights">
+                            <span>
+                                <i data-lucide="database"></i>
+                                Automated data collection
+                            </span>
+
+                            <span>
+                                <i data-lucide="brain-circuit"></i>
+                                ML recommendation logic
+                            </span>
+
+                            <span>
+                                <i data-lucide="sliders-horizontal"></i>
+                                Preference-based matching
+                            </span>
+                        </div>
                     </div>
-                    <div>
+
+                    <div class="project-footer">
                         <div class="tech-used">
-                            <span class="tech-tag">React</span><span class="tech-tag">python</span><span class="tech-tag">Web Scraping</span><span class="tech-tag">Algorithms</span><span class="tech-tag">Data Processing</span>
+                            <span class="tech-tag">Machine Learning</span>
+                            <span class="tech-tag">Recommendation Systems</span>
+                            <span class="tech-tag">Data Processing</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Web Scraping</span>
                         </div>
+
                         <div class="project-links">
-                            <a href="#" target="_blank">⚡ Live System &rarr;</a>
-                            <a href="https://github.com/pazgu/Apartment_matcher" target="_blank">📦 GitHub Code &rarr;</a>
+                            <a
+                                href="https://github.com/pazgu/Apartment_matcher"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <i class="devicon-github-original"></i>
+                                View Code
+                                <i data-lucide="arrow-up-right"></i>
+                            </a>
                         </div>
                     </div>
-                </div>
+
+                </article>
+
             </div>
         </section>
 
