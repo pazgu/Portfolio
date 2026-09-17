@@ -1,0 +1,142 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Identity-aware Autonomous SRE Agent architecture</title>
+  <desc id="desc">Production incidents flow through an authenticated Gemini agent, authorization gateway, scoped investigation tools, human approval and a complete audit trail.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f8f9ff"/>
+      <stop offset="0.58" stop-color="#f5f3ff"/>
+      <stop offset="1" stop-color="#fcecff"/>
+    </linearGradient>
+    <linearGradient id="agent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#6366f1"/>
+      <stop offset="1" stop-color="#d946ef"/>
+    </linearGradient>
+    <linearGradient id="approval" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#10b981"/>
+      <stop offset="1" stop-color="#22c55e"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-30%" width="140%" height="170%">
+      <feDropShadow dx="0" dy="14" stdDeviation="20" flood-color="#6366f1" flood-opacity="0.13"/>
+    </filter>
+    <filter id="smallShadow" x="-20%" y="-30%" width="140%" height="170%">
+      <feDropShadow dx="0" dy="7" stdDeviation="10" flood-color="#312e81" flood-opacity="0.10"/>
+    </filter>
+    <pattern id="dots" width="28" height="28" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.7" fill="#8b5cf6" opacity="0.14"/>
+    </pattern>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#8178cf"/>
+    </marker>
+    <style>
+      .font{font-family:Inter,Segoe UI,Arial,sans-serif}.title{font-size:42px;font-weight:800;fill:#111827}.subtitle{font-size:20px;font-weight:500;fill:#64748b}.label{font-size:20px;font-weight:750;fill:#172033}.small{font-size:15px;font-weight:600;fill:#667085}.tiny{font-size:13px;font-weight:700;fill:#6d67a8;letter-spacing:.08em}.white{fill:#fff}.line{fill:none;stroke:#8178cf;stroke-width:4;stroke-linecap:round;marker-end:url(#arrow)}
+    </style>
+  </defs>
+
+  <rect width="1600" height="900" rx="40" fill="url(#bg)"/>
+  <rect width="1600" height="900" rx="40" fill="url(#dots)"/>
+
+  <text x="88" y="92" class="font title">Identity-Aware Agent Execution</text>
+  <text x="88" y="132" class="font subtitle">Authenticate → Authorize → Investigate → Approve → Act → Audit</text>
+  <g transform="translate(1290 68)">
+    <rect width="220" height="52" rx="26" fill="#fff" stroke="#c7c4ff"/>
+    <circle cx="28" cy="26" r="8" fill="#34d399"/>
+    <text x="48" y="33" class="font small" fill="#263045">SECURE PROTOTYPE</text>
+  </g>
+
+  <!-- Incoming incident -->
+  <g transform="translate(72 295)" filter="url(#smallShadow)">
+    <rect width="250" height="210" rx="28" fill="#fff" stroke="#d8d5ff" stroke-width="2"/>
+    <rect x="24" y="24" width="58" height="58" rx="17" fill="#f1f0ff"/>
+    <path d="M42 41h22M42 53h17M42 65h25" stroke="#655df3" stroke-width="4" stroke-linecap="round"/>
+    <text x="24" y="119" class="font label">Production Incident</text>
+    <text x="24" y="151" class="font small">Logs · request IDs</text>
+    <text x="24" y="178" class="font small">Deployment context</text>
+  </g>
+
+  <path d="M330 400 H405" class="line"/>
+
+  <!-- Agent -->
+  <g transform="translate(420 245)" filter="url(#shadow)">
+    <rect width="360" height="310" rx="34" fill="url(#agent)"/>
+    <circle cx="70" cy="70" r="34" fill="#fff" opacity="0.16"/>
+    <path d="M55 68c0-12 7-20 15-20s15 8 15 20-7 20-15 20-15-8-15-20Zm-8 25h46" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round"/>
+    <text x="32" y="137" class="font tiny white" opacity="0.82">AUTONOMOUS REACT LOOP</text>
+    <text x="32" y="181" class="font label white" style="font-size:29px">Gemini SRE Agent</text>
+    <text x="32" y="218" class="font small white" opacity="0.86">Correlates logs and deployments</text>
+    <text x="32" y="247" class="font small white" opacity="0.86">Synthesizes evidence across steps</text>
+    <g transform="translate(32 266)">
+      <rect width="126" height="31" rx="15" fill="#fff" opacity="0.17"/>
+      <text x="18" y="21" class="font small white" style="font-size:13px">OAuth 2.0</text>
+      <rect x="137" width="155" height="31" rx="15" fill="#fff" opacity="0.17"/>
+      <text x="153" y="21" class="font small white" style="font-size:13px">SPIFFE ID</text>
+    </g>
+  </g>
+
+  <path d="M790 400 H855" class="line"/>
+
+  <!-- Auth gateway -->
+  <g transform="translate(870 280)" filter="url(#smallShadow)">
+    <rect width="280" height="240" rx="28" fill="#fff" stroke="#bdb8ff" stroke-width="2"/>
+    <path d="M140 35 180 50v31c0 34-20 56-40 66-20-10-40-32-40-66V50l40-15Z" fill="#eeeefe" stroke="#6961ee" stroke-width="3"/>
+    <path d="m122 83 13 13 27-31" fill="none" stroke="#6961ee" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="52" y="179" class="font label">Authorization Gateway</text>
+    <text x="70" y="210" class="font small">Identity · scopes · policy</text>
+  </g>
+
+  <path d="M1160 400 H1224" class="line"/>
+
+  <!-- Tool cluster -->
+  <g transform="translate(1240 216)">
+    <text x="0" y="0" class="font tiny">SCOPED TOOL EXECUTION</text>
+    <g transform="translate(0 25)" filter="url(#smallShadow)">
+      <rect width="280" height="72" rx="19" fill="#fff" stroke="#d8d5ff"/>
+      <circle cx="38" cy="36" r="18" fill="#efefff"/><text x="31" y="43" class="font label" style="font-size:20px">⌕</text>
+      <text x="68" y="31" class="font label" style="font-size:17px">Search Logs</text>
+      <text x="68" y="53" class="font small" style="font-size:13px">logs:read</text>
+    </g>
+    <g transform="translate(0 111)" filter="url(#smallShadow)">
+      <rect width="280" height="72" rx="19" fill="#fff" stroke="#d8d5ff"/>
+      <circle cx="38" cy="36" r="18" fill="#efefff"/><text x="29" y="43" class="font label" style="font-size:18px">↻</text>
+      <text x="68" y="31" class="font label" style="font-size:17px">Recent Changes</text>
+      <text x="68" y="53" class="font small" style="font-size:13px">deployments:read</text>
+    </g>
+    <g transform="translate(0 197)" filter="url(#smallShadow)">
+      <rect width="280" height="72" rx="19" fill="#fff" stroke="#d8d5ff"/>
+      <circle cx="38" cy="36" r="18" fill="#efefff"/><text x="30" y="43" class="font label" style="font-size:18px">✎</text>
+      <text x="68" y="31" class="font label" style="font-size:17px">Record Evidence</text>
+      <text x="68" y="53" class="font small" style="font-size:13px">notes:write</text>
+    </g>
+    <g transform="translate(0 283)" filter="url(#smallShadow)">
+      <rect width="280" height="72" rx="19" fill="#fff" stroke="#a9e7c9"/>
+      <circle cx="38" cy="36" r="18" fill="#e8fbf2"/><text x="30" y="43" class="font label" style="font-size:18px;fill:#059669">✓</text>
+      <text x="68" y="31" class="font label" style="font-size:17px">Create Ticket</text>
+      <text x="68" y="53" class="font small" style="font-size:13px">approval + tickets:write</text>
+    </g>
+  </g>
+
+  <!-- Trust controls footer -->
+  <g transform="translate(420 648)" filter="url(#smallShadow)">
+    <rect width="1098" height="142" rx="28" fill="#fff" stroke="#d8d5ff" stroke-width="2"/>
+    <g transform="translate(32 31)">
+      <rect width="288" height="80" rx="18" fill="#f8f7ff"/>
+      <circle cx="40" cy="40" r="22" fill="#ecebff"/>
+      <text x="32" y="47" class="font label" style="font-size:20px">ID</text>
+      <text x="76" y="34" class="font label" style="font-size:17px">Workload Identity</text>
+      <text x="76" y="58" class="font small" style="font-size:13px">SPIFFE/SPIRE validation</text>
+    </g>
+    <g transform="translate(344 31)">
+      <rect width="310" height="80" rx="18" fill="#f8f7ff"/>
+      <circle cx="40" cy="40" r="22" fill="#ecebff"/>
+      <text x="32" y="47" class="font label" style="font-size:20px">✓</text>
+      <text x="76" y="34" class="font label" style="font-size:17px">Human Approval</text>
+      <text x="76" y="58" class="font small" style="font-size:13px">Required for impact actions</text>
+    </g>
+    <g transform="translate(678 31)">
+      <rect width="388" height="80" rx="18" fill="#f8f7ff"/>
+      <circle cx="40" cy="40" r="22" fill="#ecebff"/>
+      <text x="31" y="47" class="font label" style="font-size:20px">≡</text>
+      <text x="76" y="34" class="font label" style="font-size:17px">Complete Audit Trail</text>
+      <text x="76" y="58" class="font small" style="font-size:13px">Every allow, deny and approval recorded</text>
+    </g>
+  </g>
+</svg>

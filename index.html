@@ -362,125 +362,133 @@
             </p>
 
             <div class="projects-grid">
-
-                <!-- Vehicle Management System -->
-
-                <article class="project-card featured-project">
+                <!--  Autonomous SRE Log Investigation Agent -->
+                <article class="project-card project-card--agent">
 
                     <input
                         type="checkbox"
-                        id="video-vehicle"
+                        id="sre-agent-details"
                         class="modal-toggle"
                     >
 
-                    <div class="video-thumbnail">
+                    <!-- Main card image -->
+                    <div class="video-thumbnail agent-thumbnail">
                         <label
-                            for="video-vehicle"
-                            aria-label="Play Vehicle Management System demo"
+                            for="sre-agent-details"
+                            aria-label="Open Secure SRE Agent execution trace"
                         >
                             <img
-                                src="./assets/images/vehicle.png"
-                                alt="Vehicle Management and Booking System dashboard"
+                                src="./assets/images/secure-sre-agent-architecture.svg"
+                                alt="Identity-aware architecture of the Secure Autonomous SRE Investigation Agent"
                                 loading="lazy"
                             >
-
-                            <div class="project-type">
-                                Product Ownership · Secure Workflows
+                            <div class="agent-image-hover">
+                                <i data-lucide="maximize-2"></i>
                             </div>
-
-                            <div class="play-button" aria-hidden="true">▶</div>
                         </label>
                     </div>
 
-                    <div class="modal">
-                        <div class="modal-content">
+                        <span class="project-type">
+                            Agentic AI · Identity · SRE Automation
+                        </span>
 
-                            <iframe
-                                class="video-frame"
-                                src="https://www.youtube.com/embed/ezpQ4PLQylc"
-                                title="Vehicle Management System demo"
-                                frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write;
-                                    encrypted-media; gyroscope;
-                                    picture-in-picture; web-share"
-                                allowfullscreen
-                            ></iframe>
+                    <!-- Modal -->
+                    <div class="modal agent-modal">
+                        <!-- Clicking the background closes the modal -->
+                        <label
+                            for="sre-agent-details"
+                            class="overlay agent-modal-overlay"
+                            aria-label="Close execution trace"
+                        ></label>
+
+                        <div class="modal-content agent-modal-content">
+
+                            <img
+                                class="agent-modal-image"
+                                src="./assets/images/sre-agent-execution-trace.svg"
+                                alt="Authorization and execution trace of the Secure Autonomous SRE Investigation Agent"
+                            >
 
                             <label
-                                for="video-vehicle"
-                                class="overlay"
-                                aria-label="Close video"
-                            ></label>
-
-                            <label
-                                for="video-vehicle"
-                                class="close"
-                                aria-label="Close video"
+                                for="sre-agent-details"
+                                class="close agent-modal-close"
+                                aria-label="Close execution trace"
                             >
                                 ✕
                             </label>
 
                         </div>
+
                     </div>
 
+                    <!-- Project content -->
                     <div class="project-content">
+ 
                         <h3 class="project-name">
-                            Vehicle Operations &amp; Booking Platform
+                            Secure Autonomous SRE Investigation Agent
                         </h3>
 
                         <p class="project-desc">
-                            Led the product definition and technical delivery of a
-                            multi-role operational platform for employees, supervisors,
-                            inspectors and administrators. Translated manual processes
-                            into structured ride requests, approval workflows,
-                            rule-based vehicle allocation, real-time status tracking,
-                            maintenance alerts, audit trails and operational dashboards.
+                            Designed and built an autonomous AI agent that investigates
+                            production incidents through multi-step log analysis, deployment
+                            correlation and contextual reasoning. The agent operates under an
+                            authenticated workload identity, validates authorization before
+                            every tool invocation and requires human approval for high-impact
+                            actions.
                         </p>
 
+                        <!-- Three highlights, matching the other cards -->
                         <div class="project-highlights">
-                            <span>
-                                <i data-lucide="users"></i>
-                                Four distinct user roles
-                            </span>
-
-                            <span>
-                                <i data-lucide="shield-check"></i>
-                                RBAC and JWT authentication
-                            </span>
 
                             <span>
                                 <i data-lucide="workflow"></i>
-                                End-to-end approval flows
+                                Autonomous ReAct investigation
                             </span>
+
+                            <span>
+                                <i data-lucide="fingerprint"></i>
+                                Authenticated and scope-authorized agent
+                            </span>
+
+                            <span>
+                                <i data-lucide="clipboard-check"></i>
+                                Human approval and complete audit trail
+                            </span>
+
                         </div>
+
                     </div>
 
                     <div class="project-footer">
+
                         <div class="tech-used">
-                            <span class="tech-tag">Product Ownership</span>
-                            <span class="tech-tag">RBAC</span>
-                            <span class="tech-tag">Approval Workflows</span>
-                            <span class="tech-tag">Auditability</span>
-                            <span class="tech-tag">Angular</span>
-                            <span class="tech-tag">FastAPI</span>
-                            <span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">Agentic AI</span>
+                            <span class="tech-tag">ReAct</span>
+                            <span class="tech-tag">Vercel AI SDK</span>
+                            <span class="tech-tag">Gemini</span>
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">Zod</span>
+                            <span class="tech-tag">OAuth 2.0</span>
+                            <span class="tech-tag">Scoped Access</span>
+                            <span class="tech-tag">SPIFFE/SPIRE</span>
                         </div>
 
                         <div class="project-links">
                             <a
-                                href="https://github.com/pazgu/Vehicle-Desk-System"
+                                class="project-code-link"
+                                href="https://github.com/pazgu/prod-log-triage-agent"
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
                                 <i class="devicon-github-original"></i>
-                                View Code
+                                <span>View Code</span>
                                 <i data-lucide="arrow-up-right"></i>
                             </a>
                         </div>
+
                     </div>
 
                 </article>
-
 
                 <!-- Hierarchical Catalog -->
 
@@ -503,13 +511,13 @@
                                 loading="lazy"
                             >
 
-                            <div class="project-type">
-                                Authorization · Complex Hierarchies
-                            </div>
-
                             <div class="play-button" aria-hidden="true">▶</div>
                         </label>
                     </div>
+
+                   <span class="project-type">
+                            Authorization · Complex Hierarchies
+                   </span>
 
                     <div class="modal">
                         <div class="modal-content">
@@ -622,13 +630,13 @@
                                 loading="lazy"
                             >
 
-                            <div class="project-type">
-                                Machine Learning · Personalization
-                            </div>
-
                             <div class="play-button" aria-hidden="true">▶</div>
                         </label>
                     </div>
+
+                    <span class="project-type">
+                         Machine Learning · Personalization
+                    </span>
 
                     <div class="modal">
                         <div class="modal-content">
@@ -717,6 +725,125 @@
                     </div>
 
                 </article>
+
+                <!-- Vehicle Management System -->
+
+                <article class="project-card featured-project">
+
+                    <input
+                        type="checkbox"
+                        id="video-vehicle"
+                        class="modal-toggle"
+                    >
+
+                    <div class="video-thumbnail">
+                        <label
+                            for="video-vehicle"
+                            aria-label="Play Vehicle Management System demo"
+                        >
+                            <img
+                                src="./assets/images/vehicle.png"
+                                alt="Vehicle Management and Booking System dashboard"
+                                loading="lazy"
+                            >
+                            <div class="play-button" aria-hidden="true">▶</div>
+                        </label>
+                    </div>
+
+                    <span class="project-type">
+                                Product Ownership · Secure Workflows
+                    </span>
+
+
+                    <div class="modal">
+                        <div class="modal-content">
+
+                            <iframe
+                                class="video-frame"
+                                src="https://www.youtube.com/embed/ezpQ4PLQylc"
+                                title="Vehicle Management System demo"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write;
+                                    encrypted-media; gyroscope;
+                                    picture-in-picture; web-share"
+                                allowfullscreen
+                            ></iframe>
+
+                            <label
+                                for="video-vehicle"
+                                class="overlay"
+                                aria-label="Close video"
+                            ></label>
+
+                            <label
+                                for="video-vehicle"
+                                class="close"
+                                aria-label="Close video"
+                            >
+                                ✕
+                            </label>
+
+                        </div>
+                    </div>
+
+                    <div class="project-content">
+                        <h3 class="project-name">
+                            Vehicle Operations &amp; Booking Platform
+                        </h3>
+
+                        <p class="project-desc">
+                            Led the product definition and technical delivery of a
+                            multi-role operational platform for employees, supervisors,
+                            inspectors and administrators. Translated manual processes
+                            into structured ride requests, approval workflows,
+                            rule-based vehicle allocation, real-time status tracking,
+                            maintenance alerts, audit trails and operational dashboards.
+                        </p>
+
+                        <div class="project-highlights">
+                            <span>
+                                <i data-lucide="users"></i>
+                                Four distinct user roles
+                            </span>
+
+                            <span>
+                                <i data-lucide="shield-check"></i>
+                                RBAC and JWT authentication
+                            </span>
+
+                            <span>
+                                <i data-lucide="workflow"></i>
+                                End-to-end approval flows
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="project-footer">
+                        <div class="tech-used">
+                            <span class="tech-tag">Product Ownership</span>
+                            <span class="tech-tag">RBAC</span>
+                            <span class="tech-tag">Approval Workflows</span>
+                            <span class="tech-tag">Auditability</span>
+                            <span class="tech-tag">Angular</span>
+                            <span class="tech-tag">FastAPI</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                        </div>
+
+                        <div class="project-links">
+                            <a
+                                href="https://github.com/pazgu/Vehicle-Desk-System"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <i class="devicon-github-original"></i>
+                                View Code
+                                <i data-lucide="arrow-up-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </article>
+
 
             </div>
         </section>
@@ -868,7 +995,7 @@
         }));
 
         /* ---------- Typing effect ---------- */
-        const roles = ['Full Stack Developer', 'Software Team Leader', 'Systems Architect'];
+        const roles = ['Technical Product Manager','R&D Team Lead','Product-Minded Engineer'];
         const typed = document.getElementById('typedRole');
         let ri = 0, ci = 0, deleting = false;
         function tick() {

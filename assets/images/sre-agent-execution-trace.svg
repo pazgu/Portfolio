@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Secure SRE Agent execution trace</title>
+  <desc id="desc">A visual execution trace showing authenticated identity, allowed read tools, a denied unauthorized action, human approval and an audited ticket creation.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#111827"/><stop offset="1" stop-color="#1e1b4b"/></linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#818cf8"/><stop offset="1" stop-color="#e879f9"/></linearGradient>
+    <filter id="glow"><feDropShadow dx="0" dy="0" stdDeviation="9" flood-color="#818cf8" flood-opacity=".28"/></filter>
+    <style>.font{font-family:Inter,Segoe UI,Arial,sans-serif}.mono{font-family:JetBrains Mono,Consolas,monospace}.title{font-size:39px;font-weight:800;fill:#f8fafc}.sub{font-size:19px;fill:#a5b4cf}.label{font-size:17px;font-weight:750;fill:#e8ebf8}.body{font-size:15px;fill:#aeb9d2}.code{font-size:15px;fill:#d8def2}</style>
+  </defs>
+  <rect width="1600" height="900" rx="38" fill="url(#bg)"/>
+  <circle cx="1410" cy="-20" r="300" fill="#7c3aed" opacity=".12"/>
+  <circle cx="110" cy="880" r="280" fill="#2563eb" opacity=".10"/>
+  <text x="78" y="86" class="font title">Secure Agent Execution Trace</text>
+  <text x="78" y="124" class="font sub">One investigation · authenticated identity · policy decisions · human-controlled action</text>
+
+  <g transform="translate(78 174)">
+    <rect width="1444" height="630" rx="28" fill="#0b1020" stroke="#343b64" stroke-width="2"/>
+    <circle cx="30" cy="28" r="7" fill="#fb7185"/><circle cx="54" cy="28" r="7" fill="#fbbf24"/><circle cx="78" cy="28" r="7" fill="#34d399"/>
+    <text x="116" y="34" class="mono body">investigation/session-5115</text>
+    <line x1="0" y1="57" x2="1444" y2="57" stroke="#29304e"/>
+
+    <g transform="translate(34 86)">
+      <rect width="1376" height="64" rx="14" fill="#151b31"/>
+      <circle cx="34" cy="32" r="16" fill="#312e81"/><text x="28" y="38" class="font label" style="font-size:16px">ID</text>
+      <text x="66" y="27" class="mono code">agent identity authenticated</text>
+      <text x="66" y="48" class="mono body">spiffe://portfolio.local/agent/sre-investigator · OAuth token issued</text>
+      <rect x="1195" y="16" width="145" height="32" rx="16" fill="#064e3b"/><text x="1230" y="38" class="font label" style="font-size:13px;fill:#6ee7b7">VERIFIED</text>
+    </g>
+
+    <g transform="translate(34 164)">
+      <rect width="1376" height="64" rx="14" fill="#151b31"/>
+      <circle cx="34" cy="32" r="16" fill="#164e63"/><text x="28" y="38" class="font label" style="font-size:17px">✓</text>
+      <text x="66" y="27" class="mono code">searchLogsByIdentifier(request_id: "req-8841")</text>
+      <text x="66" y="48" class="mono body">required scope logs:read · policy decision ALLOW · 47 correlated entries</text>
+      <rect x="1195" y="16" width="145" height="32" rx="16" fill="#064e3b"/><text x="1237" y="38" class="font label" style="font-size:13px;fill:#6ee7b7">ALLOWED</text>
+    </g>
+
+    <g transform="translate(34 242)">
+      <rect width="1376" height="64" rx="14" fill="#151b31"/>
+      <circle cx="34" cy="32" r="16" fill="#164e63"/><text x="28" y="38" class="font label" style="font-size:17px">✓</text>
+      <text x="66" y="27" class="mono code">getRecentChanges()</text>
+      <text x="66" y="48" class="mono body">required scope deployments:read · correlated deploy 17:29:52 with failure onset</text>
+      <rect x="1195" y="16" width="145" height="32" rx="16" fill="#064e3b"/><text x="1237" y="38" class="font label" style="font-size:13px;fill:#6ee7b7">ALLOWED</text>
+    </g>
+
+    <g transform="translate(34 320)">
+      <rect width="1376" height="64" rx="14" fill="#211725" stroke="#7f1d1d"/>
+      <circle cx="34" cy="32" r="16" fill="#7f1d1d"/><text x="28" y="38" class="font label" style="font-size:17px">×</text>
+      <text x="66" y="27" class="mono code">restartDatabaseCluster()</text>
+      <text x="66" y="48" class="mono body">required scope infrastructure:admin · scope absent · invocation blocked before execution</text>
+      <rect x="1195" y="16" width="145" height="32" rx="16" fill="#7f1d1d"/><text x="1243" y="38" class="font label" style="font-size:13px;fill:#fecaca">DENIED</text>
+    </g>
+
+    <g transform="translate(34 398)">
+      <rect width="1376" height="64" rx="14" fill="#211e15" stroke="#854d0e"/>
+      <circle cx="34" cy="32" r="16" fill="#854d0e"/><text x="28" y="38" class="font label" style="font-size:17px">!</text>
+      <text x="66" y="27" class="mono code">createTicket(severity: "HIGH")</text>
+      <text x="66" y="48" class="mono body">tickets:write present · high-impact policy requires explicit human approval</text>
+      <rect x="1136" y="16" width="204" height="32" rx="16" fill="#713f12"/><text x="1162" y="38" class="font label" style="font-size:13px;fill:#fde68a">AWAITING APPROVAL</text>
+    </g>
+
+    <g transform="translate(34 476)">
+      <rect width="1376" height="64" rx="14" fill="#14241f" stroke="#047857"/>
+      <circle cx="34" cy="32" r="16" fill="#047857"/><text x="28" y="38" class="font label" style="font-size:17px">✓</text>
+      <text x="66" y="27" class="mono code">approval received → ticket TICKET-5115 created</text>
+      <text x="66" y="48" class="mono body">approver, policy decision, tool input and result appended to immutable audit trail</text>
+      <rect x="1195" y="16" width="145" height="32" rx="16" fill="#064e3b"/><text x="1224" y="38" class="font label" style="font-size:13px;fill:#6ee7b7">EXECUTED</text>
+    </g>
+
+    <g transform="translate(34 560)">
+      <rect width="1376" height="40" rx="12" fill="url(#accent)" opacity=".16" filter="url(#glow)"/>
+      <text x="18" y="26" class="mono code">AUDIT COMPLETE · 5 decisions recorded · 1 unauthorized action prevented · 1 human-approved action executed</text>
+    </g>
+  </g>
+</svg>
